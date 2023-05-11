@@ -8,6 +8,13 @@ const db = require('../db');  // Import Sequelize database instance called "db"
 
 // Define the campus model
 const Campus = db.define("campus", {
+  id: {
+    type: Sequelize.INTEGER,
+    allowNull: false,
+    primaryKey: true,
+    autoIncrement: true,
+  },
+  
   name: {
     type: Sequelize.STRING,
     allowNull: false
@@ -20,6 +27,10 @@ const Campus = db.define("campus", {
 
   description: {
     type: Sequelize.STRING,
+  },
+  image: {
+    type: Sequelize.STRING,
+    defaultValue: "https://img.freepik.com/free-vector/school-building-educational-institution-college_107791-1051.jpg"
   }
 });
 
