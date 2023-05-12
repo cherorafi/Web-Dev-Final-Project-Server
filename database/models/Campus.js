@@ -28,7 +28,7 @@ const Campus = db.define("campus", {
   description: {
     type: Sequelize.STRING,
   },
-  image: {
+  imageUrl: {
     type: Sequelize.STRING,
     defaultValue: "https://img.freepik.com/free-vector/school-building-educational-institution-college_107791-1051.jpg"
   }

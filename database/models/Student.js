@@ -29,7 +29,7 @@ const Student = db.define("student", {
     allowNull: false
   },
 
-  image: {
+  imageUrl: {
     type:Sequelize.STRING,
     defaultValue: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
   },
@@ -41,6 +41,7 @@ const Student = db.define("student", {
 
   gpa: {
     type: Sequelize.FLOAT,
+    allowNull: true,
     validate: {
       min: 0,
       max: 4
